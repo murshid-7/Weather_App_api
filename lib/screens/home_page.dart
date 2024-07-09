@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/controller/location_provider.dart';
-import 'package:flutter_application_1/controller/weather_provider.dart';
+import 'package:flutter_application_1/service/weather_sevice.dart';
 import 'package:flutter_application_1/screens/weather_details_screen.dart';
 import 'package:flutter_application_1/utils/apptext.dart';
 import 'package:intl/intl.dart';

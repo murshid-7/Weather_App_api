@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -9,10 +11,10 @@ class WeatherService extends ChangeNotifier {
   WeatherModel? _weather;
   WeatherModel? get weather => _weather;
   bool isLoading = false;
-  String error = '';
   Future<void> fetchWeatherCity(String city) async {
     isLoading = true;
-    error = '';
+    String error;
+
     try {
       final String apiUrl =
           "${APIEndPoints().baseUrl}$city&appid=${APIEndPoints().apikey}";
@@ -22,9 +24,7 @@ class WeatherService extends ChangeNotifier {
 
         _weather = WeatherModel.fromJson(data);
         notifyListeners();
-      } else {
-        error = "failed to load";
-      }
+      } else {}
     } catch (e) {
       error = 'failed to load $e';
     } finally {
